@@ -14,14 +14,21 @@
 		38552A7819411AD300911FD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552A7719411AD300911FD3 /* main.m */; };
 		38552A7C19411AD300911FD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552A7B19411AD300911FD3 /* AppDelegate.m */; };
 		38552A7F19411AD300911FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38552A7D19411AD300911FD3 /* Main.storyboard */; };
-		38552A8219411AD300911FD3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552A8119411AD300911FD3 /* FirstViewController.m */; };
-		38552A8519411AD300911FD3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552A8419411AD300911FD3 /* SecondViewController.m */; };
 		38552A8719411AD300911FD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38552A8619411AD300911FD3 /* Images.xcassets */; };
 		38552A8E19411AD300911FD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A8D19411AD300911FD3 /* XCTest.framework */; };
 		38552A8F19411AD300911FD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6B19411AD300911FD3 /* Foundation.framework */; };
 		38552A9019411AD300911FD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6F19411AD300911FD3 /* UIKit.framework */; };
 		38552A9819411AD300911FD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38552A9619411AD300911FD3 /* InfoPlist.strings */; };
 		38552A9A19411AD300911FD3 /* tracitlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552A9919411AD300911FD3 /* tracitlyTests.m */; };
+		38552B28194F99C100911FD3 /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B27194F99C100911FD3 /* ActivityTableViewController.m */; };
+		38552B2B194F99D500911FD3 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B2A194F99D500911FD3 /* Activity.m */; };
+		38552B2E194F9A7500911FD3 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B2D194F9A7500911FD3 /* Event.m */; };
+		38552B31194F9B3600911FD3 /* TaskCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B30194F9B3600911FD3 /* TaskCategory.m */; };
+		38552B34194FCCC500911FD3 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B33194FCCC500911FD3 /* ActivityCell.m */; };
+		38552B3A195084E400911FD3 /* ActivityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B39195084E400911FD3 /* ActivityDetailsViewController.m */; };
+		38552B3D1950AD7B00911FD3 /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B3C1950AD7B00911FD3 /* CategoryPickerViewController.m */; };
+		38552B431950D55B00911FD3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B421950D55B00911FD3 /* MainViewController.m */; };
+		38552B461950D7B500911FD3 /* ActivityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B451950D7B500911FD3 /* ActivityHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +53,30 @@
 		38552A7A19411AD300911FD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38552A7B19411AD300911FD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38552A7E19411AD300911FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		38552A8019411AD300911FD3 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		38552A8119411AD300911FD3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		38552A8319411AD300911FD3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		38552A8419411AD300911FD3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		38552A8619411AD300911FD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38552A8C19411AD300911FD3 /* tracitlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tracitlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38552A8D19411AD300911FD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		38552A9519411AD300911FD3 /* tracitlyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tracitlyTests-Info.plist"; sourceTree = "<group>"; };
 		38552A9719411AD300911FD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38552A9919411AD300911FD3 /* tracitlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tracitlyTests.m; sourceTree = "<group>"; };
+		38552B26194F99C100911FD3 /* ActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTableViewController.h; path = ViewControllers/ActivityTableViewController.h; sourceTree = "<group>"; };
+		38552B27194F99C100911FD3 /* ActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTableViewController.m; path = ViewControllers/ActivityTableViewController.m; sourceTree = "<group>"; };
+		38552B29194F99D500911FD3 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = Models/Activity.h; sourceTree = "<group>"; };
+		38552B2A194F99D500911FD3 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = Models/Activity.m; sourceTree = "<group>"; };
+		38552B2C194F9A7500911FD3 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = Models/Event.h; sourceTree = "<group>"; };
+		38552B2D194F9A7500911FD3 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = Models/Event.m; sourceTree = "<group>"; };
+		38552B2F194F9B3600911FD3 /* TaskCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskCategory.h; path = Models/TaskCategory.h; sourceTree = "<group>"; };
+		38552B30194F9B3600911FD3 /* TaskCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskCategory.m; path = Models/TaskCategory.m; sourceTree = "<group>"; };
+		38552B32194FCCC500911FD3 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityCell.h; path = ViewControllers/ActivityCell.h; sourceTree = "<group>"; };
+		38552B33194FCCC500911FD3 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityCell.m; path = ViewControllers/ActivityCell.m; sourceTree = "<group>"; };
+		38552B38195084E400911FD3 /* ActivityDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityDetailsViewController.h; path = ViewControllers/ActivityDetailsViewController.h; sourceTree = "<group>"; };
+		38552B39195084E400911FD3 /* ActivityDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityDetailsViewController.m; path = ViewControllers/ActivityDetailsViewController.m; sourceTree = "<group>"; };
+		38552B3B1950AD7B00911FD3 /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryPickerViewController.h; path = ViewControllers/CategoryPickerViewController.h; sourceTree = "<group>"; };
+		38552B3C1950AD7B00911FD3 /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryPickerViewController.m; path = ViewControllers/CategoryPickerViewController.m; sourceTree = "<group>"; };
+		38552B411950D55B00911FD3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
+		38552B421950D55B00911FD3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
+		38552B441950D7B500911FD3 /* ActivityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityHelper.h; path = Models/ActivityHelper.h; sourceTree = "<group>"; };
+		38552B451950D7B500911FD3 /* ActivityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityHelper.m; path = Models/ActivityHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +136,11 @@
 		38552A7119411AD300911FD3 /* tracitly */ = {
 			isa = PBXGroup;
 			children = (
+				38552B22194F990B00911FD3 /* ViewControllers */,
+				38552B21194F98E800911FD3 /* Models */,
 				38552A7A19411AD300911FD3 /* AppDelegate.h */,
 				38552A7B19411AD300911FD3 /* AppDelegate.m */,
 				38552A7D19411AD300911FD3 /* Main.storyboard */,
-				38552A8019411AD300911FD3 /* FirstViewController.h */,
-				38552A8119411AD300911FD3 /* FirstViewController.m */,
-				38552A8319411AD300911FD3 /* SecondViewController.h */,
-				38552A8419411AD300911FD3 /* SecondViewController.m */,
 				38552A8619411AD300911FD3 /* Images.xcassets */,
 				38552A7219411AD300911FD3 /* Supporting Files */,
 			);
@@ -155,6 +174,38 @@
 				38552A9619411AD300911FD3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38552B21194F98E800911FD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38552B29194F99D500911FD3 /* Activity.h */,
+				38552B2A194F99D500911FD3 /* Activity.m */,
+				38552B2C194F9A7500911FD3 /* Event.h */,
+				38552B2D194F9A7500911FD3 /* Event.m */,
+				38552B2F194F9B3600911FD3 /* TaskCategory.h */,
+				38552B30194F9B3600911FD3 /* TaskCategory.m */,
+				38552B441950D7B500911FD3 /* ActivityHelper.h */,
+				38552B451950D7B500911FD3 /* ActivityHelper.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		38552B22194F990B00911FD3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				38552B26194F99C100911FD3 /* ActivityTableViewController.h */,
+				38552B27194F99C100911FD3 /* ActivityTableViewController.m */,
+				38552B32194FCCC500911FD3 /* ActivityCell.h */,
+				38552B33194FCCC500911FD3 /* ActivityCell.m */,
+				38552B38195084E400911FD3 /* ActivityDetailsViewController.h */,
+				38552B39195084E400911FD3 /* ActivityDetailsViewController.m */,
+				38552B3B1950AD7B00911FD3 /* CategoryPickerViewController.h */,
+				38552B3C1950AD7B00911FD3 /* CategoryPickerViewController.m */,
+				38552B411950D55B00911FD3 /* MainViewController.h */,
+				38552B421950D55B00911FD3 /* MainViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +255,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = JP;
 				TargetAttributes = {
+					38552A6719411AD300911FD3 = {
+						DevelopmentTeam = 2PDKKRN49M;
+					};
 					38552A8B19411AD300911FD3 = {
 						TestTargetID = 38552A6719411AD300911FD3;
 					};
@@ -254,9 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38552A8519411AD300911FD3 /* SecondViewController.m in Sources */,
 				38552A7C19411AD300911FD3 /* AppDelegate.m in Sources */,
-				38552A8219411AD300911FD3 /* FirstViewController.m in Sources */,
+				38552B461950D7B500911FD3 /* ActivityHelper.m in Sources */,
+				38552B3D1950AD7B00911FD3 /* CategoryPickerViewController.m in Sources */,
+				38552B31194F9B3600911FD3 /* TaskCategory.m in Sources */,
+				38552B431950D55B00911FD3 /* MainViewController.m in Sources */,
+				38552B28194F99C100911FD3 /* ActivityTableViewController.m in Sources */,
+				38552B2E194F9A7500911FD3 /* Event.m in Sources */,
+				38552B3A195084E400911FD3 /* ActivityDetailsViewController.m in Sources */,
+				38552B2B194F99D500911FD3 /* Activity.m in Sources */,
+				38552B34194FCCC500911FD3 /* ActivityCell.m in Sources */,
 				38552A7819411AD300911FD3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,10 +443,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tracitly/tracitly-Prefix.pch";
 				INFOPLIST_FILE = "tracitly/tracitly-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,10 +459,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tracitly/tracitly-Prefix.pch";
 				INFOPLIST_FILE = "tracitly/tracitly-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -462,6 +529,7 @@
 				38552A9F19411AD300911FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38552AA019411AD300911FD3 /* Build configuration list for PBXNativeTarget "tracitlyTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +538,7 @@
 				38552AA219411AD300911FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

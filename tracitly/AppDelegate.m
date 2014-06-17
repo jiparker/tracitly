@@ -7,14 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "ActivityTableViewController.h"
+#import "Activity.h"
+#import "ActivityHelper.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
+{
+    NSMutableArray *_activities;
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    _activities = [ActivityHelper getActivities];
+   
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
+    UINavigationController *navigationController = [tabBarController viewControllers][1];
+    ActivityTableViewController *activitiesViewController = [navigationController viewControllers][0];
+    activitiesViewController.activities = _activities;
+    
+    MainViewController *main = [tabBarController viewControllers][0];
+    main.activities = _activities;
+    
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
