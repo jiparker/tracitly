@@ -28,7 +28,9 @@
 		38552B3A195084E400911FD3 /* ActivityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B39195084E400911FD3 /* ActivityDetailsViewController.m */; };
 		38552B3D1950AD7B00911FD3 /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B3C1950AD7B00911FD3 /* CategoryPickerViewController.m */; };
 		38552B431950D55B00911FD3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B421950D55B00911FD3 /* MainViewController.m */; };
-		38552B461950D7B500911FD3 /* ActivityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B451950D7B500911FD3 /* ActivityHelper.m */; };
+		38552B461950D7B500911FD3 /* SeedHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38552B451950D7B500911FD3 /* SeedHelper.m */; };
+		38D3EB0919523FD200B80935 /* FileSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3EB0819523FD200B80935 /* FileSystemHelper.m */; };
+		38D3EB0C1952420600B80935 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3EB0B1952420600B80935 /* DataHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +77,12 @@
 		38552B3C1950AD7B00911FD3 /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryPickerViewController.m; path = ViewControllers/CategoryPickerViewController.m; sourceTree = "<group>"; };
 		38552B411950D55B00911FD3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewControllers/MainViewController.h; sourceTree = "<group>"; };
 		38552B421950D55B00911FD3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewControllers/MainViewController.m; sourceTree = "<group>"; };
-		38552B441950D7B500911FD3 /* ActivityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityHelper.h; path = Models/ActivityHelper.h; sourceTree = "<group>"; };
-		38552B451950D7B500911FD3 /* ActivityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityHelper.m; path = Models/ActivityHelper.m; sourceTree = "<group>"; };
+		38552B441950D7B500911FD3 /* SeedHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeedHelper.h; path = Models/SeedHelper.h; sourceTree = "<group>"; };
+		38552B451950D7B500911FD3 /* SeedHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeedHelper.m; path = Models/SeedHelper.m; sourceTree = "<group>"; };
+		38D3EB0719523FD200B80935 /* FileSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSystemHelper.h; path = Helpers/FileSystemHelper.h; sourceTree = "<group>"; };
+		38D3EB0819523FD200B80935 /* FileSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileSystemHelper.m; path = Helpers/FileSystemHelper.m; sourceTree = "<group>"; };
+		38D3EB0A1952420600B80935 /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataHelper.h; path = Models/DataHelper.h; sourceTree = "<group>"; };
+		38D3EB0B1952420600B80935 /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataHelper.m; path = Models/DataHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 		38552A7119411AD300911FD3 /* tracitly */ = {
 			isa = PBXGroup;
 			children = (
+				38D3EB0619523FB600B80935 /* Helpers */,
 				38552B22194F990B00911FD3 /* ViewControllers */,
 				38552B21194F98E800911FD3 /* Models */,
 				38552A7A19411AD300911FD3 /* AppDelegate.h */,
@@ -185,8 +192,10 @@
 				38552B2D194F9A7500911FD3 /* Event.m */,
 				38552B2F194F9B3600911FD3 /* TaskCategory.h */,
 				38552B30194F9B3600911FD3 /* TaskCategory.m */,
-				38552B441950D7B500911FD3 /* ActivityHelper.h */,
-				38552B451950D7B500911FD3 /* ActivityHelper.m */,
+				38552B441950D7B500911FD3 /* SeedHelper.h */,
+				38552B451950D7B500911FD3 /* SeedHelper.m */,
+				38D3EB0A1952420600B80935 /* DataHelper.h */,
+				38D3EB0B1952420600B80935 /* DataHelper.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -206,6 +215,15 @@
 				38552B421950D55B00911FD3 /* MainViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		38D3EB0619523FB600B80935 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38D3EB0719523FD200B80935 /* FileSystemHelper.h */,
+				38D3EB0819523FD200B80935 /* FileSystemHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				38552A7C19411AD300911FD3 /* AppDelegate.m in Sources */,
-				38552B461950D7B500911FD3 /* ActivityHelper.m in Sources */,
+				38552B461950D7B500911FD3 /* SeedHelper.m in Sources */,
+				38D3EB0919523FD200B80935 /* FileSystemHelper.m in Sources */,
 				38552B3D1950AD7B00911FD3 /* CategoryPickerViewController.m in Sources */,
 				38552B31194F9B3600911FD3 /* TaskCategory.m in Sources */,
 				38552B431950D55B00911FD3 /* MainViewController.m in Sources */,
+				38D3EB0C1952420600B80935 /* DataHelper.m in Sources */,
 				38552B28194F99C100911FD3 /* ActivityTableViewController.m in Sources */,
 				38552B2E194F9A7500911FD3 /* Event.m in Sources */,
 				38552B3A195084E400911FD3 /* ActivityDetailsViewController.m in Sources */,
@@ -441,7 +461,6 @@
 		38552A9E19411AD300911FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -457,7 +476,6 @@
 		38552A9F19411AD300911FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

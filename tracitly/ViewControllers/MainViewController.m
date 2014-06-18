@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "ActivityHelper.h"
+#import "SeedHelper.h"
 #import "Activity.h"
 
 @interface MainViewController ()

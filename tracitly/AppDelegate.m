@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "ActivityTableViewController.h"
 #import "Activity.h"
-#import "ActivityHelper.h"
+#import "SeedHelper.h"
 #import "MainViewController.h"
+#import "DataHelper.h"
 
 @implementation AppDelegate
 {
@@ -20,7 +21,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _activities = [ActivityHelper getActivities];
+    //Seed data after refresh of app settings for testing helps
+    //[SeedHelper seedActivities];
+    //[SeedHelper seedCategories];
+    _activities = [DataHelper loadObjectsWithModelName:@"Activity"];
+    
    
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     

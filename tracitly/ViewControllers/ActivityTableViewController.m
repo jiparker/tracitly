@@ -9,6 +9,7 @@
 #import "ActivityTableViewController.h"
 #import "Activity.h"
 #import "ActivityCell.h"
+#import "DataHelper.h"
 
 @interface ActivityTableViewController ()
 
@@ -88,17 +89,17 @@
 - (void)activityDetailsViewController: (ActivityDetailsViewController *)controller didAddActivity:(Activity *)activity
 {
     [self.activities addObject:activity];
+    [DataHelper SaveObjects:self.activities];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow: ([self.activities count] - 1) inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)activityDetailsViewController: (ActivityDetailsViewController *)controller didEditActivity:(Activity *)activity
 {
+    [DataHelper SaveObjects:self.activities];
     NSUInteger index = [self.activities indexOfObject:activity];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

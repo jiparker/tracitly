@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Activity : NSObject
+@interface Activity : NSObject <NSCoding>
 
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *category;

@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ActivityHelper : NSObject
+@interface SeedHelper : NSObject
 
-+ (NSMutableArray *)getActivities;
-
++ (void)seedActivities;
++ (void)seedCategories;
 @end

@@ -6,12 +6,19 @@
 //  Copyright (c) 2014 JP. All rights reserved.
 //
 
-#import "ActivityHelper.h"
+#import "SeedHelper.h"
 #import "Activity.h"
+#import "DataHelper.h"
 
-@implementation ActivityHelper
+@implementation SeedHelper
 
-+ (NSMutableArray *)getActivities {
++ (void)seedCategories {
+    
+    
+    
+}
+
++ (void)seedActivities {
     NSMutableArray *activities = [NSMutableArray arrayWithCapacity:20];
     
     Activity *activity = [[Activity alloc] init];
@@ -80,8 +87,9 @@
     activity.estimate = 15;
     [activities addObject:activity];
     
-    return activities;
-}
+    [DataHelper SaveObjects:activities];
+    
+    }
 
 
 
