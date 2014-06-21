@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DataHelper : NSObject
-
 +(BOOL)SaveObjects:(NSMutableArray *)objects;
 +(NSMutableArray *)loadObjectsWithModelName:(NSString *)name;
-
++(BOOL)updateLatestObject:(NSObject *)object;
++(NSObject *)createObject:(NSObject *)object;
++(NSObject *)getLastObject:(NSString *)name;
 @end

@@ -12,10 +12,10 @@
 
 +(NSURL *)pathForDocumentsFile:(NSString *)filename {
     NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray *directories = [fm URLsForDirectory:NSDocumentationDirectory inDomains:NSUserDomainMask];
+    NSArray *directories = [fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     NSURL *documentPath = [directories objectAtIndex:0]; //because in iOS, there is only one document directory (per sandboxed app)
     
-    return documentPath;
+    return [documentPath URLByAppendingPathComponent:filename];
+    
 }
-
 @end

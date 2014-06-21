@@ -27,8 +27,44 @@
 
 +(NSMutableArray *)loadObjectsWithModelName:(NSString *)name {
     NSURL *dataFile = [FileSystemHelper pathForDocumentsFile:[name stringByAppendingString:@".data"]];
+    //NSURL *dataFile = [FileSystemHelper pathForDocumentsFile:@"Event.data"];
     NSString *filePath = [dataFile path];
     NSMutableArray *objects = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    if (objects == nil) return [[NSMutableArray alloc] init];
     return objects;
 }
+
++(NSObject *)getLastObject:(NSString *)name {
+    
+    NSMutableArray *array = [self loadObjectsWithModelName:name];
+    NSObject *object =  array[array.count -1];
+    return object;
+    
+}
+
++(NSObject *)createObject:(NSObject *)object {
+    NSString *className = NSStringFromClass([object class]);
+    NSMutableArray *array = [self loadObjectsWithModelName:className];
+    
+    [array addObject:object];
+    if ([self SaveObjects:array])
+    {
+        return (NSObject *)array[array.count -1];
+        
+    }
+    else return nil;
+    
+}
+
++(BOOL)updateLatestObject:(NSObject *)object {
+    
+    NSString *className = NSStringFromClass([object class]);
+    NSMutableArray *array = [self loadObjectsWithModelName:className];
+    
+    array[array.count -1] = object;
+    if ([self SaveObjects:array]) return YES;
+    else return NO;
+    
+}
+
 @end

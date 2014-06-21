@@ -10,6 +10,7 @@
 
 @interface Event : NSObject
 @property (nonatomic,copy) NSString *activity;
-@property (nonatomic,assign) int startTime;
-@property (nonatomic, assign) int endTime;
+@property (nonatomic,assign) double startTime;
+@property (nonatomic, assign) double endTime;
+@property (nonatomic, copy) NSString *category;
 @end

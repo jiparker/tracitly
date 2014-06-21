@@ -9,12 +9,15 @@
 #import "MainViewController.h"
 #import "SeedHelper.h"
 #import "Activity.h"
+#import "Event.h"
+#import "DataHelper.h"
 
 @interface MainViewController ()
 {
     int secondsElapsed;
     int secondsEstimate;
     NSTimer *_timer;
+    Event *currentlyRunningEvent;
 }
 
 @end
@@ -30,6 +33,88 @@
     }
     return self;
 }
+
+-(void)checkPreviousTimer {
+    
+    Event *event = (Event *)[DataHelper getLastObject:@"Event"];
+    double now = [[NSDate date] timeIntervalSince1970];
+    
+    if (event.endTime == 0) {
+        currentlyRunningEvent = event;
+        secondsElapsed = now - event.startTime;
+        [self restartTimer];
+    }
+    
+}
+
+-(void)restartTimer {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                              target:self
+                                            selector:@selector(updateElapsed)
+                                            userInfo:nil
+                                             repeats:YES];
+    
+}
+
+- (void)startTimer:(NSString *)name {
+    
+    if (_timer) {
+        [self stopTimer];
+    }
+    self.lblElapsed.text = @"00:00:00";
+    secondsElapsed = 0;
+    
+    currentlyRunningEvent = [self createEventWithName:name ];
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                              target:self
+                                            selector:@selector(updateElapsed)
+                                            userInfo:nil
+                                             repeats:YES];
+}
+
+-(Event *)createEventWithName:(NSString *)eventActivity {
+    
+    Event *event = [[Event alloc] init];
+    event.activity = eventActivity;
+    event.startTime =[[NSDate date] timeIntervalSince1970];
+    event.category = @"Maint";
+    
+    //Get persisted list of objects
+    Event *newObj = (Event *)[DataHelper createObject:event];
+    
+    
+    //add new event - get back index number
+    
+    //return reference to the object in the array
+    return newObj;
+    
+}
+
+-(BOOL)updateEventWithEndTime {
+    
+    //get the right event
+    
+    currentlyRunningEvent.endTime = [[NSDate date] timeIntervalSince1970];
+    [DataHelper updateLatestObject:currentlyRunningEvent];
+    
+    //set end time
+    
+    //save and persist
+    
+    return YES;
+}
+
+
+- (void)stopTimer {
+    if ([_timer isValid]) {
+        [_timer invalidate];
+    }
+    [self updateEventWithEndTime];
+    _timer = nil;
+    
+}
+
 
 - (void)viewDidLoad
 {
@@ -103,13 +188,6 @@
     }
 }
 
-- (void)stopTimer {
-    if ([_timer isValid]) {
-        [_timer invalidate];
-    }
-    _timer = nil;
-}
-
 -(void) updateElapsed {
     int hours, minutes, seconds;
     
@@ -120,9 +198,9 @@
     self.lblElapsed.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
     float percentDone = (float)secondsElapsed / (float)secondsEstimate * 100;
     self.lblPercentDone.text = [NSString stringWithFormat:@"%.0f%%",percentDone];
-    
-    
-    
 }
+
+
+
 
 @end
