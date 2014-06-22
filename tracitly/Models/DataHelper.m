@@ -37,8 +37,12 @@
 +(NSObject *)getLastObject:(NSString *)name {
     
     NSMutableArray *array = [self loadObjectsWithModelName:name];
-    NSObject *object =  array[array.count -1];
-    return object;
+    
+    if (array.count > 0) {
+        NSObject *object =  array[array.count -1];
+        return object;
+    }
+    else return nil;
     
 }
 

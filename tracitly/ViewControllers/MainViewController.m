@@ -34,14 +34,53 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    _activities = [DataHelper loadObjectsWithModelName:@"Activity"];
+    self.activities = _activities;
+    [self.tvMain reloadData];
+    
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+   // MainViewController *main = [tabBarController viewControllers][0];
+    self.activities = _activities;
+    
+    self.lblPercentDone.text = @"";
+    self.lblEstimate.text = @"";
+    
+    [self checkPreviousTimer];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#//////////////////////////////////////////////////////
+#pragma mark - Timer stuff
+#//////////////////////////////////////////////////////
+
 -(void)checkPreviousTimer {
     
     Event *event = (Event *)[DataHelper getLastObject:@"Event"];
     double now = [[NSDate date] timeIntervalSince1970];
     
-    if (event.endTime == 0) {
-        currentlyRunningEvent = event;
+    if (event != nil && event.endTime == 0) {
+        self.lblTest.text = event.activity;
+        self.lblEstimate.text = [NSString stringWithFormat:@"%d",event.estimate];
         secondsElapsed = now - event.startTime;
+        secondsEstimate = event.estimate * 60;
+        
+        
+        float percentDone = (float)secondsElapsed / (float)secondsEstimate / 100 ;
+
+        self.lblPercentDone.text = [NSString stringWithFormat:@"%.0f%%",percentDone];
+        currentlyRunningEvent = event;
+        
         [self restartTimer];
     }
     
@@ -56,15 +95,16 @@
     
 }
 
-- (void)startTimer:(NSString *)name {
+- (void)startTimer:(Activity *)activity {
     
     if (_timer) {
         [self stopTimer];
     }
     self.lblElapsed.text = @"00:00:00";
+    self.lblPercentDone.text = @"0%";
     secondsElapsed = 0;
     
-    currentlyRunningEvent = [self createEventWithName:name ];
+    currentlyRunningEvent = [self createEventWithName:activity ];
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                               target:self
@@ -73,12 +113,40 @@
                                              repeats:YES];
 }
 
--(Event *)createEventWithName:(NSString *)eventActivity {
+- (void)stopTimer {
+    if ([_timer isValid]) {
+        [_timer invalidate];
+    }
+    [self updateEventWithEndTime];
+    _timer = nil;
+    
+}
+
+-(void) updateElapsed {
+    int hours, minutes, seconds;
+    
+    secondsElapsed++;
+    hours = secondsElapsed / 3600;
+    minutes = (secondsElapsed % 3600) / 60;
+    seconds = (secondsElapsed %3600) % 60;
+    self.lblElapsed.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
+    float percentDone = (float)secondsElapsed / (float)secondsEstimate * 100;
+    self.lblPercentDone.text = [NSString stringWithFormat:@"%.0f%%",percentDone];
+}
+
+
+#//////////////////////////////////////////////////////
+#pragma mark - Data Manipulation
+#//////////////////////////////////////////////////////
+
+
+-(Event *)createEventWithName:(Activity *)activity {
     
     Event *event = [[Event alloc] init];
-    event.activity = eventActivity;
+    event.activity = activity.title;
     event.startTime =[[NSDate date] timeIntervalSince1970];
     event.category = @"Maint";
+    event.estimate = activity.estimate;
     
     //Get persisted list of objects
     Event *newObj = (Event *)[DataHelper createObject:event];
@@ -95,44 +163,19 @@
     
     //get the right event
     
-    currentlyRunningEvent.endTime = [[NSDate date] timeIntervalSince1970];
-    [DataHelper updateLatestObject:currentlyRunningEvent];
-    
-    //set end time
-    
-    //save and persist
+    if (currentlyRunningEvent != nil) {
+        currentlyRunningEvent.endTime = [[NSDate date] timeIntervalSince1970];
+        [DataHelper updateLatestObject:currentlyRunningEvent];
+    }
     
     return YES;
 }
 
 
-- (void)stopTimer {
-    if ([_timer isValid]) {
-        [_timer invalidate];
-    }
-    [self updateEventWithEndTime];
-    _timer = nil;
-    
-}
+#//////////////////////////////////////////////////////
+#pragma mark - Table handlers
+#//////////////////////////////////////////////////////
 
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    self.lblPercentDone.text = @"";
-    self.lblEstimate.text = @"";
-    
-    //_activities = [ActivityHelper getActivities];
-    
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -162,7 +205,7 @@
     secondsEstimate = activity.estimate * 60;
     self.lblEstimate.text = [NSString stringWithFormat:@"%d m",activity.estimate];
     self.lblTest.text = activity.title;
-    [self startTimer];
+    [self startTimer:activity];
     
 }
 
@@ -178,27 +221,16 @@
 }
 */
 
-- (void)startTimer {
-    if (!_timer) {
-        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
-                                                  target:self
-                                                selector:@selector(updateElapsed)
-                                                userInfo:nil
-                                                 repeats:YES];
-    }
-}
+//- (void)startTimer {
+//    if (!_timer) {
+//        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+//                                                  target:self
+//                                                selector:@selector(updateElapsed)
+//                                                userInfo:nil
+//                                                 repeats:YES];
+//    }
+//}
 
--(void) updateElapsed {
-    int hours, minutes, seconds;
-    
-    secondsElapsed++;
-    hours = secondsElapsed / 3600;
-    minutes = (secondsElapsed % 3600) / 60;
-    seconds = (secondsElapsed %3600) % 60;
-    self.lblElapsed.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
-    float percentDone = (float)secondsElapsed / (float)secondsEstimate * 100;
-    self.lblPercentDone.text = [NSString stringWithFormat:@"%.0f%%",percentDone];
-}
 
 
 

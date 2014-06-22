@@ -17,6 +17,8 @@
 
 @implementation ActivityTableViewController
 
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -25,6 +27,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -43,7 +46,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+#//////////////////////////////////////////////////////
 #pragma mark - Table view data source
+#//////////////////////////////////////////////////////
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -56,7 +61,6 @@
     return [self.activities count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityCell"];
@@ -66,7 +70,6 @@
     cell.titleLabel.text = activity.title;
     cell.catLabel.text = activity.category;
     cell.estLabel.text = [NSString stringWithFormat:@"%d m",activity.estimate];
-   
     
       //silliness
     UIColor *glowColor = [UIColor blueColor];
@@ -77,7 +80,6 @@
     cell.estLabel.layer.shadowOpacity = .8;
     cell.estLabel.layer.shadowOffset = CGSizeZero;
     cell.estLabel.layer.masksToBounds = NO;
-    
     
     return cell;
 }

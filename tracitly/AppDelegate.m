@@ -24,17 +24,14 @@
     //Seed data after refresh of app settings for testing helps
     //[SeedHelper seedActivities];
     //[SeedHelper seedCategories];
+    
     _activities = [DataHelper loadObjectsWithModelName:@"Activity"];
-    
-   
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    
     UINavigationController *navigationController = [tabBarController viewControllers][1];
     ActivityTableViewController *activitiesViewController = [navigationController viewControllers][0];
     activitiesViewController.activities = _activities;
     
-    MainViewController *main = [tabBarController viewControllers][0];
-    main.activities = _activities;
+    
     
     return YES;
 }

@@ -13,6 +13,8 @@ NSString *const kACTIVITY_activity = @"activity";
 NSString *const kACTIVITY_acategory = @"category";
 NSString *const kACTIVITY_startTime= @"startTime";
 NSString *const kACTIVITY_endTime = @"endTime";
+NSString *const kACTIVITY_event_estimate = @"estimate";
+
 
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {
@@ -20,6 +22,8 @@ NSString *const kACTIVITY_endTime = @"endTime";
     [aCoder encodeObject:_category forKey:kACTIVITY_acategory];
     [aCoder encodeDouble:_startTime forKey:kACTIVITY_startTime];
     [aCoder encodeDouble:_endTime forKey:kACTIVITY_endTime];
+    [aCoder encodeInt:_estimate forKey:kACTIVITY_event_estimate];
+
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -30,6 +34,7 @@ NSString *const kACTIVITY_endTime = @"endTime";
         [self setCategory:[aDecoder decodeObjectForKey:kACTIVITY_acategory]];
         [self setStartTime:[aDecoder decodeDoubleForKey:kACTIVITY_startTime]];
         [self setEndTime:[aDecoder decodeDoubleForKey:kACTIVITY_endTime]];
+        [self setEstimate:[aDecoder decodeIntForKey:kACTIVITY_event_estimate]];
     }
     return self;
 }

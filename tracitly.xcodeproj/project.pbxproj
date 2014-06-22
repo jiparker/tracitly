@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3805AB3B1957012E0083BA07 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805AB3A1957012E0083BA07 /* HistoryCell.m */; };
+		3805AB3E195715B40083BA07 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805AB3D195715B40083BA07 /* HistoryTableViewController.m */; };
 		38552A6C19411AD300911FD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6B19411AD300911FD3 /* Foundation.framework */; };
 		38552A6E19411AD300911FD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6D19411AD300911FD3 /* CoreGraphics.framework */; };
 		38552A7019411AD300911FD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6F19411AD300911FD3 /* UIKit.framework */; };
@@ -44,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3805AB391957012E0083BA07 /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryCell.h; path = ViewControllers/HistoryCell.h; sourceTree = "<group>"; };
+		3805AB3A1957012E0083BA07 /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryCell.m; path = ViewControllers/HistoryCell.m; sourceTree = "<group>"; };
+		3805AB3C195715B40083BA07 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryTableViewController.h; path = ViewControllers/HistoryTableViewController.h; sourceTree = "<group>"; };
+		3805AB3D195715B40083BA07 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTableViewController.m; path = ViewControllers/HistoryTableViewController.m; sourceTree = "<group>"; };
 		38552A6819411AD300911FD3 /* tracitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tracitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38552A6B19411AD300911FD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38552A6D19411AD300911FD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,8 +198,6 @@
 				38552B2D194F9A7500911FD3 /* Event.m */,
 				38552B2F194F9B3600911FD3 /* TaskCategory.h */,
 				38552B30194F9B3600911FD3 /* TaskCategory.m */,
-				38552B441950D7B500911FD3 /* SeedHelper.h */,
-				38552B451950D7B500911FD3 /* SeedHelper.m */,
 				38D3EB0A1952420600B80935 /* DataHelper.h */,
 				38D3EB0B1952420600B80935 /* DataHelper.m */,
 			);
@@ -203,6 +207,8 @@
 		38552B22194F990B00911FD3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38552B411950D55B00911FD3 /* MainViewController.h */,
+				38552B421950D55B00911FD3 /* MainViewController.m */,
 				38552B26194F99C100911FD3 /* ActivityTableViewController.h */,
 				38552B27194F99C100911FD3 /* ActivityTableViewController.m */,
 				38552B32194FCCC500911FD3 /* ActivityCell.h */,
@@ -211,8 +217,10 @@
 				38552B39195084E400911FD3 /* ActivityDetailsViewController.m */,
 				38552B3B1950AD7B00911FD3 /* CategoryPickerViewController.h */,
 				38552B3C1950AD7B00911FD3 /* CategoryPickerViewController.m */,
-				38552B411950D55B00911FD3 /* MainViewController.h */,
-				38552B421950D55B00911FD3 /* MainViewController.m */,
+				3805AB3C195715B40083BA07 /* HistoryTableViewController.h */,
+				3805AB3D195715B40083BA07 /* HistoryTableViewController.m */,
+				3805AB391957012E0083BA07 /* HistoryCell.h */,
+				3805AB3A1957012E0083BA07 /* HistoryCell.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +228,8 @@
 		38D3EB0619523FB600B80935 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				38552B441950D7B500911FD3 /* SeedHelper.h */,
+				38552B451950D7B500911FD3 /* SeedHelper.m */,
 				38D3EB0719523FD200B80935 /* FileSystemHelper.h */,
 				38D3EB0819523FD200B80935 /* FileSystemHelper.m */,
 			);
@@ -334,6 +344,8 @@
 				38552B431950D55B00911FD3 /* MainViewController.m in Sources */,
 				38D3EB0C1952420600B80935 /* DataHelper.m in Sources */,
 				38552B28194F99C100911FD3 /* ActivityTableViewController.m in Sources */,
+				3805AB3B1957012E0083BA07 /* HistoryCell.m in Sources */,
+				3805AB3E195715B40083BA07 /* HistoryTableViewController.m in Sources */,
 				38552B2E194F9A7500911FD3 /* Event.m in Sources */,
 				38552B3A195084E400911FD3 /* ActivityDetailsViewController.m in Sources */,
 				38552B2B194F99D500911FD3 /* Activity.m in Sources */,

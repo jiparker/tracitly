@@ -13,4 +13,5 @@
 @property (nonatomic,assign) double startTime;
 @property (nonatomic, assign) double endTime;
 @property (nonatomic, copy) NSString *category;
+@property (nonatomic, assign) int estimate;
 @end
