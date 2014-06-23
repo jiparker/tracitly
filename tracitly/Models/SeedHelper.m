@@ -24,7 +24,7 @@
     
     Activity *activity = [[Activity alloc] init];
     
-    activity.title = @"Clean Bathrooms";
+    activity.title = @"Clean Kid's Room";
     activity.category = @"Maint";
     activity.estimate = 1;
     [activities addObject:activity];
