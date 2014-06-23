@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ActivityDetailsViewController.h"
+#import "SettingViewController.h"
 
 @interface ActivityTableViewController : UITableViewController
                                             <ActivityDetailsViewControllerDelegate>
+                                           
 
 @property (nonatomic, strong) NSMutableArray *activities;
 

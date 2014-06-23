@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -44,6 +45,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    
+    
 }
 
 #//////////////////////////////////////////////////////
@@ -71,15 +78,15 @@
     cell.catLabel.text = activity.category;
     cell.estLabel.text = [NSString stringWithFormat:@"%d m",activity.estimate];
     
-      //silliness
-    UIColor *glowColor = [UIColor blueColor];
-    cell.estLabel.backgroundColor = glowColor;
-    cell.estLabel.layer.cornerRadius = 4;
-    cell.estLabel.layer.shadowColor = [glowColor CGColor];
-    cell.estLabel.layer.shadowRadius = 3.0f;
-    cell.estLabel.layer.shadowOpacity = .8;
-    cell.estLabel.layer.shadowOffset = CGSizeZero;
-    cell.estLabel.layer.masksToBounds = NO;
+//      //silliness
+//    UIColor *glowColor = [UIColor blueColor];
+//    cell.estLabel.backgroundColor = glowColor;
+//    cell.estLabel.layer.cornerRadius = 4;
+//    cell.estLabel.layer.shadowColor = [glowColor CGColor];
+//    cell.estLabel.layer.shadowRadius = 3.0f;
+//    cell.estLabel.layer.shadowOpacity = .8;
+//    cell.estLabel.layer.shadowOffset = CGSizeZero;
+//    cell.estLabel.layer.masksToBounds = NO;
     
     return cell;
 }

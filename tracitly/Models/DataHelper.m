@@ -19,14 +19,14 @@
 
 +(BOOL)SaveObjects:(NSMutableArray *)objects {
     NSString *className = NSStringFromClass([objects[0] class]);
-    NSURL *dataFile = [FileSystemHelper pathForDocumentsFile:[className stringByAppendingString:@".data"]];
+    NSURL *dataFile = [FileSystemHelper nsurlForDocumentsFile:[className stringByAppendingString:@".data"]];
     NSString *filePath = [dataFile path];
     BOOL success = [NSKeyedArchiver archiveRootObject:objects toFile:filePath];
     return success;
 }
 
 +(NSMutableArray *)loadObjectsWithModelName:(NSString *)name {
-    NSURL *dataFile = [FileSystemHelper pathForDocumentsFile:[name stringByAppendingString:@".data"]];
+    NSURL *dataFile = [FileSystemHelper nsurlForDocumentsFile:[name stringByAppendingString:@".data"]];
     //NSURL *dataFile = [FileSystemHelper pathForDocumentsFile:@"Event.data"];
     NSString *filePath = [dataFile path];
     NSMutableArray *objects = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];

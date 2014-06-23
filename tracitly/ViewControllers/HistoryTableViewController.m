@@ -82,16 +82,23 @@
     cell.lblActivity.text = historyItem.activity;
     cell.lblCategory.text = historyItem.category;
     
-    cell.lblDuration.text = [NSString stringWithFormat:@"%f m",(historyItem.endTime - historyItem.startTime)];
-    cell.lblEstimate.text = [NSString stringWithFormat:@"%d m",historyItem.estimate];
-    double percent = (historyItem.endTime - historyItem.startTime)/historyItem.estimate * 1.0;
-    cell.lblPercent.text = [NSString stringWithFormat:@"%.0f%%",percent];
+    if (historyItem.endTime == 0) {
+        cell.lblDuration.text = [NSString stringWithFormat:@"%.1f m",([[NSDate date] timeIntervalSince1970] - historyItem.startTime)/60] ;
+        cell.lblDuration.textColor = [UIColor redColor];
+        
+    }
+    else {
+        cell.lblDuration.text = [NSString stringWithFormat:@"%.1f m",(historyItem.endTime - historyItem.startTime)/ 60] ;
+    }
+    //cell.lblEstimate.text = [NSString stringWithFormat:@"%d m",historyItem.estimate];
+    //double percent = (historyItem.endTime - historyItem.startTime)/historyItem.estimate * 1.0;
+    //cell.lblPercent.text = [NSString stringWithFormat:@"%.0f%%",percent];
     
     //make date nice
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
     
-    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:historyItem.startTime];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:historyItem.startTime];
     
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
@@ -99,7 +106,7 @@
     [timeFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"hh:mm a" options:0 locale:[NSLocale currentLocale]]];
    
     cell.lblDate.text = [dateFormatter stringFromDate:date];
-    cell.lblStartTime.text = [timeFormatter stringFromDate:[NSDate date]];
+    cell.lblStartTime.text = [timeFormatter stringFromDate:date];
       
     return cell;
 }

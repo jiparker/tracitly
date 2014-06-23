@@ -31,7 +31,17 @@
     ActivityTableViewController *activitiesViewController = [navigationController viewControllers][0];
     activitiesViewController.activities = _activities;
     
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:107.0/256.0 green:145.0/256.0 blue:200/256.0 alpha:1.0]];
     
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"avenirnext-regular" size:21],NSFontAttributeName, nil]];
+    
+     
+    
+    
+    
+    
+    
+    //   [UIFont fontWithName:@"avenir-next-regular" size:21]
     
     return YES;
 }

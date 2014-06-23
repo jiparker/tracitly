@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		3805AB3B1957012E0083BA07 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805AB3A1957012E0083BA07 /* HistoryCell.m */; };
 		3805AB3E195715B40083BA07 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805AB3D195715B40083BA07 /* HistoryTableViewController.m */; };
+		3805AB49195767570083BA07 /* activity-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB48195767570083BA07 /* activity-30.png */; };
+		3805AB4C195767CD0083BA07 /* timer-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB4A195767CD0083BA07 /* timer-30.png */; };
+		3805AB4F1957682F0083BA07 /* history-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB4E1957682F0083BA07 /* history-25.png */; };
+		3805AB5219576BAC0083BA07 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805AB5119576BAC0083BA07 /* MainCell.m */; };
+		3805AB58195793FB0083BA07 /* settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB57195793FB0083BA07 /* settings-30.png */; };
+		3805AB5B195794A60083BA07 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805AB5A195794A60083BA07 /* SettingViewController.m */; };
+		3805AB851957AA510083BA07 /* tr-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB821957AA510083BA07 /* tr-30.png */; };
+		3805AB861957AA510083BA07 /* tr-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB831957AA510083BA07 /* tr-60.png */; };
+		3805AB871957AA510083BA07 /* tr-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB841957AA510083BA07 /* tr-60@2x.png */; };
+		3805AB8B1957AABE0083BA07 /* tr120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB8A1957AABE0083BA07 /* tr120@2x.png */; };
+		3805AB8D1957AB330083BA07 /* tr120-1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805AB8C1957AB330083BA07 /* tr120-1x.png */; };
 		38552A6C19411AD300911FD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6B19411AD300911FD3 /* Foundation.framework */; };
 		38552A6E19411AD300911FD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6D19411AD300911FD3 /* CoreGraphics.framework */; };
 		38552A7019411AD300911FD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38552A6F19411AD300911FD3 /* UIKit.framework */; };
@@ -50,6 +61,19 @@
 		3805AB3A1957012E0083BA07 /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryCell.m; path = ViewControllers/HistoryCell.m; sourceTree = "<group>"; };
 		3805AB3C195715B40083BA07 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryTableViewController.h; path = ViewControllers/HistoryTableViewController.h; sourceTree = "<group>"; };
 		3805AB3D195715B40083BA07 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTableViewController.m; path = ViewControllers/HistoryTableViewController.m; sourceTree = "<group>"; };
+		3805AB48195767570083BA07 /* activity-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-30.png"; sourceTree = "<group>"; };
+		3805AB4A195767CD0083BA07 /* timer-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer-30.png"; sourceTree = "<group>"; };
+		3805AB4E1957682F0083BA07 /* history-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history-25.png"; sourceTree = "<group>"; };
+		3805AB5019576BAC0083BA07 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainCell.h; path = ViewControllers/MainCell.h; sourceTree = "<group>"; };
+		3805AB5119576BAC0083BA07 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCell.m; path = ViewControllers/MainCell.m; sourceTree = "<group>"; };
+		3805AB57195793FB0083BA07 /* settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-30.png"; sourceTree = "<group>"; };
+		3805AB59195794A60083BA07 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = ViewControllers/SettingViewController.h; sourceTree = "<group>"; };
+		3805AB5A195794A60083BA07 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = ViewControllers/SettingViewController.m; sourceTree = "<group>"; };
+		3805AB821957AA510083BA07 /* tr-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tr-30.png"; sourceTree = "<group>"; };
+		3805AB831957AA510083BA07 /* tr-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tr-60.png"; sourceTree = "<group>"; };
+		3805AB841957AA510083BA07 /* tr-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tr-60@2x.png"; sourceTree = "<group>"; };
+		3805AB8A1957AABE0083BA07 /* tr120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tr120@2x.png"; sourceTree = "<group>"; };
+		3805AB8C1957AB330083BA07 /* tr120-1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tr120-1x.png"; sourceTree = "<group>"; };
 		38552A6819411AD300911FD3 /* tracitly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tracitly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38552A6B19411AD300911FD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38552A6D19411AD300911FD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +139,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3805AB45195765C80083BA07 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3805AB8C1957AB330083BA07 /* tr120-1x.png */,
+				3805AB821957AA510083BA07 /* tr-30.png */,
+				3805AB831957AA510083BA07 /* tr-60.png */,
+				3805AB8A1957AABE0083BA07 /* tr120@2x.png */,
+				3805AB841957AA510083BA07 /* tr-60@2x.png */,
+				3805AB57195793FB0083BA07 /* settings-30.png */,
+				3805AB4E1957682F0083BA07 /* history-25.png */,
+				3805AB4A195767CD0083BA07 /* timer-30.png */,
+				3805AB48195767570083BA07 /* activity-30.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		38552A5F19411AD300911FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +188,7 @@
 		38552A7119411AD300911FD3 /* tracitly */ = {
 			isa = PBXGroup;
 			children = (
+				3805AB45195765C80083BA07 /* Images */,
 				38D3EB0619523FB600B80935 /* Helpers */,
 				38552B22194F990B00911FD3 /* ViewControllers */,
 				38552B21194F98E800911FD3 /* Models */,
@@ -221,6 +262,10 @@
 				3805AB3D195715B40083BA07 /* HistoryTableViewController.m */,
 				3805AB391957012E0083BA07 /* HistoryCell.h */,
 				3805AB3A1957012E0083BA07 /* HistoryCell.m */,
+				3805AB5019576BAC0083BA07 /* MainCell.h */,
+				3805AB5119576BAC0083BA07 /* MainCell.m */,
+				3805AB59195794A60083BA07 /* SettingViewController.h */,
+				3805AB5A195794A60083BA07 /* SettingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -315,9 +360,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3805AB8B1957AABE0083BA07 /* tr120@2x.png in Resources */,
 				38552A8719411AD300911FD3 /* Images.xcassets in Resources */,
+				3805AB8D1957AB330083BA07 /* tr120-1x.png in Resources */,
+				3805AB4F1957682F0083BA07 /* history-25.png in Resources */,
+				3805AB851957AA510083BA07 /* tr-30.png in Resources */,
 				38552A7619411AD300911FD3 /* InfoPlist.strings in Resources */,
+				3805AB58195793FB0083BA07 /* settings-30.png in Resources */,
 				38552A7F19411AD300911FD3 /* Main.storyboard in Resources */,
+				3805AB871957AA510083BA07 /* tr-60@2x.png in Resources */,
+				3805AB49195767570083BA07 /* activity-30.png in Resources */,
+				3805AB4C195767CD0083BA07 /* timer-30.png in Resources */,
+				3805AB861957AA510083BA07 /* tr-60.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +392,7 @@
 			files = (
 				38552A7C19411AD300911FD3 /* AppDelegate.m in Sources */,
 				38552B461950D7B500911FD3 /* SeedHelper.m in Sources */,
+				3805AB5B195794A60083BA07 /* SettingViewController.m in Sources */,
 				38D3EB0919523FD200B80935 /* FileSystemHelper.m in Sources */,
 				38552B3D1950AD7B00911FD3 /* CategoryPickerViewController.m in Sources */,
 				38552B31194F9B3600911FD3 /* TaskCategory.m in Sources */,
@@ -346,6 +401,7 @@
 				38552B28194F99C100911FD3 /* ActivityTableViewController.m in Sources */,
 				3805AB3B1957012E0083BA07 /* HistoryCell.m in Sources */,
 				3805AB3E195715B40083BA07 /* HistoryTableViewController.m in Sources */,
+				3805AB5219576BAC0083BA07 /* MainCell.m in Sources */,
 				38552B2E194F9A7500911FD3 /* Event.m in Sources */,
 				38552B3A195084E400911FD3 /* ActivityDetailsViewController.m in Sources */,
 				38552B2B194F99D500911FD3 /* Activity.m in Sources */,
@@ -473,6 +529,7 @@
 		38552A9E19411AD300911FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -488,6 +545,7 @@
 		38552A9F19411AD300911FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

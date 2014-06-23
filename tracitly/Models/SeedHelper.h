@@ -12,4 +12,5 @@
 
 + (void)seedActivities;
 + (void)seedCategories;
++ (void)clearActivities;
 @end

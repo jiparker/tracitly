@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblEstimate;
 @property (weak, nonatomic) IBOutlet UITableView *tvMain;
 @property (weak, nonatomic) IBOutlet UILabel *lblPercentDone;
+
 @end

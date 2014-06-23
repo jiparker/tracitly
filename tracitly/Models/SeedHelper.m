@@ -9,6 +9,7 @@
 #import "SeedHelper.h"
 #import "Activity.h"
 #import "DataHelper.h"
+#import "FileSystemHelper.h"
 
 @implementation SeedHelper
 
@@ -86,10 +87,43 @@
     activity.category = @"project";
     activity.estimate = 15;
     [activities addObject:activity];
-    
-    [DataHelper SaveObjects:activities];
+
+    if ([DataHelper SaveObjects:activities]){
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Done:" message:@"Test data seeded. (and, ah, please restart the app)" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     
     }
+    else
+    {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error:" message:@"whoops" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    
+}
+
++ (void)clearActivities {
+    
+     NSURL *dataFile = [FileSystemHelper nsurlForDocumentsFile:@"Activity.data"];
+    
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    
+//    NSString *filePath = [documentsPath stringByAppendingPathComponent:fileName];
+    NSError *error;
+    BOOL success = [fileManager removeItemAtURL:dataFile error:&error];
+    if (success) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Done:" message:@"Data removed.  (and, ah, please restart the app)" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        NSLog(@"Could not delete file -:%@ ",[error localizedDescription]);
+    }
+
+}
+
+
 
 
 

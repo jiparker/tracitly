@@ -11,6 +11,7 @@
 #import "Activity.h"
 #import "Event.h"
 #import "DataHelper.h"
+#import "MainCell.h"
 
 @interface MainViewController ()
 {
@@ -71,7 +72,7 @@
     
     if (event != nil && event.endTime == 0) {
         self.lblTest.text = event.activity;
-        self.lblEstimate.text = [NSString stringWithFormat:@"%d",event.estimate];
+        self.lblEstimate.text = [NSString stringWithFormat:@"%d m",event.estimate];
         secondsElapsed = now - event.startTime;
         secondsEstimate = event.estimate * 60;
         
@@ -186,14 +187,19 @@
 {
     static NSString *simpleTableIdentifier = @"ActivityCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    MainCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[MainCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
     Activity *activity =[_activities objectAtIndex:indexPath.row];
-    cell.textLabel.text = activity.title;
+    cell.lblActivityTitle.text = activity.title;
+    
+    [cell.vSubCell.layer setBorderColor:[UIColor colorWithRed:(245/255.0) green:(245/255.0) blue:(245/255.0) alpha:1].CGColor];
+    [cell.vSubCell.layer setBorderWidth:4.0f];
+   // [cell.contentView.layer setBorderColor:[UIColor colorWithRed:(3/255.0) green:(3/255.0) blue:(3/255.0) alpha:1].CGColor];
+    //[cell.contentView.layer setBorderWidth:2.0f];
     return cell;
 }
 

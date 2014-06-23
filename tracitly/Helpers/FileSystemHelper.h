@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface FileSystemHelper : NSObject
-+(NSURL *)pathForDocumentsFile:(NSString *)filename;
++(NSString *)pathForDocumentsFile:(NSString *)filename;
++(NSURL *)nsurlForDocumentsFile:(NSString *)filename;
 @end
